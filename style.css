@@ -1,0 +1,70 @@
+section {
+    display: flex;
+    background-color: #C7EAE4;
+    height: 500px;
+}
+
+
+/* Flexbox avanzado - al hijos, ej section padre - div hijo
+
+:::: order ::::
+
+todos elementos tiene valor 0, o sea, 
+order: 1; va al final. 
+order: 2; va al final despues del 1. 
+
+::::  flex-grow :::: 
+
+cuando debe crescer relativo a los otros en espacio horizontal, o sea,
+no importa el valor que pongas va comportar igual.
+pode ser 1 elemento o todos. 
+2 = 2 partes
+3 = 3 partes 
+
+:::: flex-shrink ::::
+
+cuando no hay mas espacio el iten con shrink va diminuir primero
+
+:::: flex-basis ::::
+
+es como width pero mas fuerte, deja el elemento con un tamaño fijo
+*si usas flex-basis no usas width*
+
+:::: flex :::: 
+
+es la suma de todos: 
+flex-grow : 1 
+flex-shrink : auto
+flex-basis  : 1
+
+comun usar flex: 1 
+
+:::: align-self ::::
+
+alinea los elementos flexibles de la línea flexible actual.
+*reemplazando el align-items*
+*/
+
+section>div {
+    background-color: #FCBCB8;
+    border: 2px dotted #EFA7A7;
+    margin: 5px;
+    flex: 1;
+    height: 150px;
+    align-self: flex-end;
+}
+
+#primer-elemento {
+    background-color: #FFD972;
+    align-self: flex-start;
+}
+
+#segundo-elemento {
+    background-color: #A7E8BD;
+    align-self: center;
+}
+
+p {
+    margin: 10px;
+    color: #8D918B;
+}
